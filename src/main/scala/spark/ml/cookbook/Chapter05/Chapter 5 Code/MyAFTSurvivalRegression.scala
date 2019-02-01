@@ -21,7 +21,7 @@ object MyAFTSurvivalRegression {
 
 //    ID,time,age,drug,censor,entdate,enddate
 //    1,5,46,0,1,5/15/1990,10/14/1990
-    val file = spark.sparkContext.textFile("../data/sparkml2/chapter5/hmohiv.csv")
+    val file = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter05/Data/hmohiv.csv")
     val headerAndData = file.map(line => line.split(",").map(_.trim))
     val header = headerAndData.first
     val rawData = headerAndData.filter(_(0) != header(0))

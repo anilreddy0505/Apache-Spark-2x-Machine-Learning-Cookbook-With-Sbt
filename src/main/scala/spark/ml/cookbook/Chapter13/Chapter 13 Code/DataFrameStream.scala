@@ -27,14 +27,14 @@ object DataFrameStream {
     val df = spark.read
             .format("json")
             .option("inferSchema", "true")
-            .load("../data/sparkml2/chapter13/person.json")
+            .load("./src/main/scala/spark/ml/cookbook/Chapter13/Data/person.json")
     df.printSchema()
     df.show()
 
     val stream = spark.readStream
           .schema(df.schema)
           .option("maxFilesPerTrigger", "1")
-          .json("../data/sparkml2/chapter13/people")
+          .json("./src/main/scala/spark/ml/cookbook/Chapter13/Data/people")
 
     stream.printSchema()
 

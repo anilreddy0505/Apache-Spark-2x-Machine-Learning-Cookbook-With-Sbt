@@ -87,7 +87,7 @@ object MyGDLinearRegression {
   }
   def main(args: Array[String]): Unit = {
 
-    val input = "../data/sparkml2/chapter9/Year_Salary.csv"
+    val input = "./src/main/scala/spark/ml/cookbook/Chapter09/Data/Year_Salary.csv"
     val points = readCSV(input)
 
     val learning_rate = 0.001// 0.00001 // close .01 , .09 , .01 SPSS , .001 SPSS

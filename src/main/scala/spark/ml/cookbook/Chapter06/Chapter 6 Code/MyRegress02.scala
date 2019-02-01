@@ -42,7 +42,7 @@ object MyRegress02 {
 //    // Create a SQL Context to provide interface to DataFrame
 //    val sqlContext = new SQLContext(sc)
 
-    val data = sc.textFile("../data/sparkml2/chapter6/housing8.csv")
+    val data = sc.textFile("./src/main/scala/spark/ml/cookbook/Chapter06/Data/housing8.csv")
 
     val RegressionDataSet = data.map { line =>
       val columns = line.split(',')

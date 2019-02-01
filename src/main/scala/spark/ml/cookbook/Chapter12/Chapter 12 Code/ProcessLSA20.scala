@@ -49,7 +49,7 @@ object ProcessLSA20 {
 
   def main(args: Array[String]) {
 
-    val input = "../data/sparkml2/chapter12/enwiki_dump.xml"
+    val input = "./src/main/scala/spark/ml/cookbook/Chapter12/Data/enwiki_dump.xml"
 
     val jobConf = new JobConf()
     jobConf.set("stream.recordreader.class", "org.apache.hadoop.streaming.StreamXmlRecordReader")
@@ -79,7 +79,7 @@ object ProcessLSA20 {
 
     println("Wiki Page Count: " + wikiPages.count())
 
-    val stopwords = scala.io.Source.fromFile("../data/sparkml2/chapter12/stopwords.txt").getLines().toSet
+    val stopwords = scala.io.Source.fromFile("./src/main/scala/spark/ml/cookbook/Chapter12/Data/stopwords.txt").getLines().toSet
 
     val wikiTerms = wikiPages.map{ case(title, text) => tokenizePage(text, stopwords) }
 

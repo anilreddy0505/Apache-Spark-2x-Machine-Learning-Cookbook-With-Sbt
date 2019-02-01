@@ -24,7 +24,7 @@ object GLR {
 
     import spark.implicits._
 
-    val data = spark.read.textFile("../data/sparkml2/chapter5/housing8.csv").as[String]
+    val data = spark.read.textFile("./src/main/scala/spark/ml/cookbook/Chapter05/Data/housing8.csv").as[String]
 
     val regressionData = data.map { line =>
       val columns = line.split(',')

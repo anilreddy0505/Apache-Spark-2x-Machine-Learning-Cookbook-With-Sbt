@@ -21,7 +21,7 @@ object MyBinaryClassification {
 
     // Load training data in LIBSVM format
     //https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html
-    val data = MLUtils.loadLibSVMFile(spark.sparkContext, "../data/sparkml2/chapter4/myBinaryClassificationData.txt")
+    val data = MLUtils.loadLibSVMFile(spark.sparkContext, "./src/main/scala/spark/ml/cookbook/Chapter04/Data/myBinaryClassificationData.txt")
 
     // Split data into training (60%) and test (40%)
     val Array(training, test) = data.randomSplit(Array(0.6, 0.4), seed = 11L)

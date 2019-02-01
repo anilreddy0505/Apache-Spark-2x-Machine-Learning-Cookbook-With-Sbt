@@ -22,7 +22,7 @@ object DatasetvsRDD {
 
     import spark.implicits._
 
-    val ds = spark.read.textFile("../data/sparkml2/chapter4/beatles.txt").map(line => {
+    val ds = spark.read.textFile("./src/main/scala/spark/ml/cookbook/Chapter04/Data/beatles.txt").map(line => {
       val tokens = line.split(",")
       Beatle(tokens(0).toLong, tokens(1))
     }).as[Beatle]
@@ -30,7 +30,7 @@ object DatasetvsRDD {
     println("Dataset Type: " + ds.getClass)
     ds.show()
 
-    val rdd = spark.sparkContext.textFile("../data/sparkml2/chapter4/beatles.txt").map(line => {
+    val rdd = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter04/Data/beatles.txt").map(line => {
       val tokens = line.split(",")
       Beatle(tokens(0).toLong, tokens(1))
     })
@@ -38,7 +38,7 @@ object DatasetvsRDD {
     println("RDD Type: " + rdd.getClass)
     rdd.collect().foreach(println)
 
-    val df = spark.read.text("../data/sparkml2/chapter4/beatles.txt").map(
+    val df = spark.read.text("./src/main/scala/spark/ml/cookbook/Chapter04/Data/beatles.txt").map(
       row => { // Dataset[Row]
         val tokens = row.getString(0).split(",")
         Beatle(tokens(0).toLong, tokens(1))

@@ -28,7 +28,7 @@ object MyLDA {
       .config("spark.sql.warehouse.dir",  ".")
       .getOrCreate()
 
-    val input = "../data/sparkml2/chapter8/my_lda_data.txt"
+    val input = "./src/main/scala/spark/ml/cookbook/Chapter08/Data/my_lda_data.txt"
 
     val dataset = spark.read.format("libsvm").load(input)
     dataset.show(5)

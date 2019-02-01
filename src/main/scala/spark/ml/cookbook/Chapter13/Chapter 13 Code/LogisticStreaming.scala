@@ -31,7 +31,7 @@ object LogisticStreaming {
     val ssc = new StreamingContext(spark.sparkContext, Seconds(2))
 
     val rawDF = spark.read
-      .text("../data/sparkml2/chapter13/pima-indians-diabetes.data").as[String]
+      .text("./src/main/scala/spark/ml/cookbook/Chapter13/Data/pima-indians-diabetes.data").as[String]
 
     val buf = rawDF.rdd.map(value => {
       val data = value.split(",")

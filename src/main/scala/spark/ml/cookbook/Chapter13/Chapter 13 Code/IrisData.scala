@@ -8,7 +8,7 @@ import org.apache.spark.SparkContext
 object IrisData {
 
   def readFromFile(sc: SparkContext) = {
-      sc.textFile("../data/sparkml2/chapter13/iris.data")
+      sc.textFile("./src/main/scala/spark/ml/cookbook/Chapter13/Data/iris.data")
         .filter(s => !s.isEmpty)
         .zipWithIndex()
   }

@@ -33,7 +33,7 @@ object MovieData {
 
   def main(args: Array[String]) {
 
-    val movieFile = "../data/sparkml2/chapter7/movies.dat"
+    val movieFile = "./src/main/scala/spark/ml/cookbook/Chapter07/Data/movies.dat"
 
     Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("akka").setLevel(Level.ERROR)

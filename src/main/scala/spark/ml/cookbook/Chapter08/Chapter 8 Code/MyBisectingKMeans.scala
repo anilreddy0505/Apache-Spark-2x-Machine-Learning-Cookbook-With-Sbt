@@ -19,7 +19,7 @@ object MyBisectingKMeans {
       .getOrCreate()
 
     // https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass.html#glass
-    val dataset = spark.read.format("libsvm").load("../data/sparkml2/chapter8/glass.scale")
+    val dataset = spark.read.format("libsvm").load("./src/main/scala/spark/ml/cookbook/Chapter08/Data/glass.scale")
     dataset.show(false)
 
     val splitData = dataset.randomSplit(Array(80.0, 20.0))

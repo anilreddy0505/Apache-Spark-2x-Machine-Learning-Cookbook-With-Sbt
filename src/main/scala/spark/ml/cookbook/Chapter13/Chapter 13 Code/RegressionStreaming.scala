@@ -38,7 +38,7 @@ object RegressionStreaming {
       .option("inferSchema", "true")
       .option("header", "true")
       .option("delimiter", ";")
-      .load("../data/sparkml2/chapter13/winequality-white.csv")
+      .load("./src/main/scala/spark/ml/cookbook/Chapter13/Data/winequality-white.csv")
 
     val rdd = rawDF.rdd.zipWithUniqueId()
 

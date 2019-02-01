@@ -28,7 +28,7 @@ object MyGaussianMixture {
       .getOrCreate()
 
 
-      val dataFile ="../data/sparkml2/chapter8/socr_data.txt"
+      val dataFile ="./src/main/scala/spark/ml/cookbook/Chapter08/Data/socr_data.txt"
 
       val trainingData = spark.sparkContext.textFile(dataFile).map { line =>
         Vectors.dense(line.trim.split(' ').map(_.toDouble))

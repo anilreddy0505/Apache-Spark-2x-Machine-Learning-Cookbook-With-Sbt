@@ -23,7 +23,7 @@ object MyKMeansCluster {
       .getOrCreate()
 
 
-    val trainingData = spark.read.format("libsvm").load("../data/sparkml2/chapter8/my_kmeans_data.txt")
+    val trainingData = spark.read.format("libsvm").load("./src/main/scala/spark/ml/cookbook/Chapter08/Data/my_kmeans_data.txt")
 
     trainingData.show()
 

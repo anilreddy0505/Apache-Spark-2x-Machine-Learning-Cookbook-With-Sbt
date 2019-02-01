@@ -18,7 +18,7 @@ object MyRegressionMetrics {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val rawData = spark.sparkContext.textFile("../data/sparkml2/chapter4/breast-cancer-wisconsin.data")
+    val rawData = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter04/Data/breast-cancer-wisconsin.data")
     val data = rawData.map(_.trim)
       .filter(text => !(text.isEmpty || text.indexOf("?") > -1))
       .map { line =>

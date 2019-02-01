@@ -27,7 +27,7 @@ object MyDataset {
 
     val teams = spark.read
         .option("Header", "true")
-        .csv("../data/sparkml2/chapter4/teams.csv")
+        .csv("./src/main/scala/spark/ml/cookbook/Chapter04/Data/teams.csv")
         .as[Team]
 
     teams.show(false)
@@ -39,7 +39,7 @@ object MyDataset {
 
     teams.write
         .mode(SaveMode.Overwrite)
-        .json("../data/sparkml2/chapter4/teams.json")
+        .json("./src/main/scala/spark/ml/cookbook/Chapter04/Data/teams.json")
 
     spark.stop()
   }

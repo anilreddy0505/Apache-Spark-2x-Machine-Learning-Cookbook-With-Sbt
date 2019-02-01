@@ -27,7 +27,7 @@ object RatingsData {
 
   def main(args: Array[String]) {
 
-    val ratingsFile = "../data/sparkml2/chapter7/ratings.dat"
+    val ratingsFile = "./src/main/scala/spark/ml/cookbook/Chapter07/Data/ratings.dat"
 
     Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("akka").setLevel(Level.ERROR)

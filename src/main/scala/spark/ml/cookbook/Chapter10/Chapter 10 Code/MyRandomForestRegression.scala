@@ -23,7 +23,7 @@ object MyRandomForestRegression {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val rawData = spark.sparkContext.textFile("../data/sparkml2/chapter10/breast-cancer-wisconsin.data")
+    val rawData = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter10/Data/breast-cancer-wisconsin.data")
     val data = rawData.map(_.trim)
       .filter(text => !(text.isEmpty || text.startsWith("#") || text.indexOf("?") > -1))
       .map { line =>

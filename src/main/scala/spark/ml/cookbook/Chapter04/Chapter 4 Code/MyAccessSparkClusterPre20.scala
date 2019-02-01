@@ -17,7 +17,7 @@ object MyAccessSparkClusterPre20 {
 
     val sc = new SparkContext(conf)
 
-    val file = sc.textFile("../data/sparkml2/chapter4/mySampleCSV.csv")
+    val file = sc.textFile("./src/main/scala/spark/ml/cookbook/Chapter04/Data/mySampleCSV.csv")
     val headerAndData = file.map(line => line.split(",").map(_.trim))
     val header = headerAndData.first
     val data = headerAndData.filter(_(0) != header(0))

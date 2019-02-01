@@ -21,7 +21,7 @@ object MyDatasetJson {
 
     import spark.implicits._
 
-    val cars = spark.read.json("../data/sparkml2/chapter3/cars.json").as[Car]
+    val cars = spark.read.json("./src/main/scala/spark/ml/cookbook/Chapter03/Data/cars.json").as[Car]
     cars.show()
 
     cars.columns.foreach(println)

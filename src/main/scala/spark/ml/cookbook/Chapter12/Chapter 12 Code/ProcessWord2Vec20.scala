@@ -8,7 +8,7 @@ object ProcessWord2Vec20 {
 
   def main(args: Array[String]) {
 
-    val input = "../data/sparkml2/chapter12/pg62.txt"
+    val input = "./src/main/scala/spark/ml/cookbook/Chapter12/Data/pg62.txt"
 
     val spark = SparkSession
       .builder

@@ -22,7 +22,7 @@ object MySVD {
       .getOrCreate()
 
 
-    val dataFile = "../data/sparkml2/chapter11/ratings.dat"
+    val dataFile = "./src/main/scala/spark/ml/cookbook/Chapter11/Data/ratings.dat"
 
 
     //read data file in as a RDD, partition RDD across <partitions> cores

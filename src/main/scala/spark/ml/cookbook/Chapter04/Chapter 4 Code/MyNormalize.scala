@@ -29,7 +29,7 @@ object MyNormalize  {
     import spark.implicits._
 
     //http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data
-    val data = spark.read.text("../data/sparkml2/chapter4/wine.data").as[String].map(parseWine)
+    val data = spark.read.text("./src/main/scala/spark/ml/cookbook/Chapter04/Data/wine.data").as[String].map(parseWine)
     val df = data.toDF("id", "feature")
 
     df.printSchema()

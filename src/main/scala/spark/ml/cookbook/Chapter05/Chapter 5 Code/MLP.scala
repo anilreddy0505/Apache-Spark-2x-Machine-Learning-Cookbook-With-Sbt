@@ -22,7 +22,7 @@ object MLP {
       .getOrCreate()
 
     val data = spark.read.format("libsvm")
-      .load("../data/sparkml2/chapter5/iris.scale.txt")
+      .load("./src/main/scala/spark/ml/cookbook/Chapter05/Data/iris.scale.txt")
 
     data.show(false)
 

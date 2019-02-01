@@ -41,7 +41,7 @@ object MySVM07 {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val dataSetSVM = MLUtils.loadLibSVMFile(spark.sparkContext,"../data/sparkml2/chapter6/sample_libsvm_data.txt")
+    val dataSetSVM = MLUtils.loadLibSVMFile(spark.sparkContext,"./src/main/scala/spark/ml/cookbook/Chapter06/Data/sample_libsvm_data.txt")
 
     println("Top 10 rows of LibSVM data")
     dataSetSVM.collect().take(10).foreach(println(_))

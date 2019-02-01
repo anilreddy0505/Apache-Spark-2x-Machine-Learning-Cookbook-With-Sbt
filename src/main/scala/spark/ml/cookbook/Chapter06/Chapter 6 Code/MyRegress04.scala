@@ -49,7 +49,7 @@ object MyRegress04 {
     val sc = spark.sparkContext
 
     //val data = sc.textFile("C:/mydocs/housing5.csv")
-    val data = sc.textFile("../data/sparkml2/chapter6/housing8.csv")
+    val data = sc.textFile("./src/main/scala/spark/ml/cookbook/Chapter06/Data/housing8.csv")
     val RegressionDataSet = data.map { line =>
       val columns = line.split(',')
 

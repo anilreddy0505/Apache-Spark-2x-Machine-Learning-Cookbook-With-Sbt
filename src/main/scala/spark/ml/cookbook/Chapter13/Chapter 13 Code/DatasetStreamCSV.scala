@@ -31,7 +31,7 @@ object DatasetStreamCSV {
             .format("csv")
             .option("header", "true")
             .option("inferSchema", "true")
-            .load("../data/sparkml2/chapter13/GE.csv")
+            .load("./src/main/scala/spark/ml/cookbook/Chapter13/Data/GE.csv")
 
     s.printSchema()
     s.show()
@@ -40,7 +40,7 @@ object DatasetStreamCSV {
       .schema(s.schema)
       .option("sep", ",")
       .option("header", "true")
-      .csv("../data/sparkml2/chapter13/ge").as[StockPrice]
+      .csv("./src/main/scala/spark/ml/cookbook/Chapter13/Data/ge").as[StockPrice]
 
 
     streamDataset.printSchema()

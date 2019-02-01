@@ -28,7 +28,7 @@ object MyRegress02_20 {
 
     import spark.implicits._
 
-    val data = spark.read.text("../data/sparkml2/chapter5/housing8.csv").as[String]
+    val data = spark.read.text("./src/main/scala/spark/ml/cookbook/Chapter05/Data/housing8.csv").as[String]
 
     val RegressionDataSet = data.map { line =>
       val columns = line.split(',')

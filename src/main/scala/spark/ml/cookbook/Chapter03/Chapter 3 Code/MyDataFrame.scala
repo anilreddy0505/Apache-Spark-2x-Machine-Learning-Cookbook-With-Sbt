@@ -51,20 +51,20 @@ object MyDataFrame {
     printf("===============================================")
 
     println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    val customersRDD = spark.sparkContext.textFile("../data/sparkml2/chapter3/customers13.txt") //Customer file
+    val customersRDD = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter03/Data/customers13.txt") //Customer file
     val custRDD = customersRDD.map {
       line => val cols = line.trim.split(",")
         (cols(0).toInt, cols(1), cols(2), cols(3).toInt)
     }
 
 
-    val productsRDD = spark.sparkContext.textFile("../data/sparkml2/chapter3/products13.txt") //Product file
+    val productsRDD = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter03/Data/products13.txt") //Product file
     val prodRDD = productsRDD.map {
       line => val cols = line.trim.split(",")
         (cols(0).toInt, cols(1), cols(2), cols(3).toDouble)
     }
 
-    val salesRDD = spark.sparkContext.textFile("../data/sparkml2/chapter3/sales13.txt") //Sales file
+    val salesRDD = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter03/Data/sales13.txt") //Sales file
     val saleRDD = salesRDD.map {
       line => val cols = line.trim.split(",")
         (cols(0).toInt, cols(1).toInt, cols(2).toDouble)

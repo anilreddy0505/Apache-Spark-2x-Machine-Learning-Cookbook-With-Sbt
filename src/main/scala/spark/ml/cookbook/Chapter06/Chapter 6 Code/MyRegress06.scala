@@ -40,7 +40,7 @@ object MyRegress06 {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val data = spark.sparkContext.textFile("../data/sparkml2/chapter6/admission1.csv")
+    val data = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter06/Data/admission1.csv")
     val RegressionDataSet = data.map { line =>
       val columns = line.split(',')
 

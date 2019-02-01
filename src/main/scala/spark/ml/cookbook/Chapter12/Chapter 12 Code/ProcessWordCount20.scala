@@ -17,7 +17,7 @@ object ProcessWordCount20 {
 
   def main(args: Array[String]) {
 
-    val input = "../data/sparkml2/chapter12/pg62.txt"
+    val input = "./src/main/scala/spark/ml/cookbook/Chapter12/Data/pg62.txt"
 
     val spark = SparkSession
       .builder
@@ -30,7 +30,7 @@ object ProcessWordCount20 {
 
     Logger.getRootLogger.setLevel(Level.WARN)
 
-    val stopwords = scala.io.Source.fromFile("../data/sparkml2/chapter12/stopwords.txt").getLines().toSet
+    val stopwords = scala.io.Source.fromFile("./src/main/scala/spark/ml/cookbook/Chapter12/Data/stopwords.txt").getLines().toSet
 
     val lineOfBook = spark.sparkContext.textFile(input)
       .flatMap(line => line.split("\\W+"))

@@ -11,8 +11,8 @@ object MyStreamingKMeans {
 
   def main(args: Array[String]) {
 
-    val trainingDir = "../data/sparkml2/chapter8/trainingDir"
-    val testDir = "../data/sparkml2/chapter8/testDir"
+    val trainingDir = "./src/main/scala/spark/ml/cookbook/Chapter08/Data/trainingDir"
+    val testDir = "./src/main/scala/spark/ml/cookbook/Chapter08/Data/testDir"
     val batchDuration = 10
     val numClusters = 2
     val numDimensions = 3

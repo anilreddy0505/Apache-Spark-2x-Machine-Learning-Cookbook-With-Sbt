@@ -19,7 +19,7 @@ object MyDataSplit {
       .getOrCreate()
 
     // http://archive.ics.uci.edu/ml/machine-learning-databases/00359/NewsAggregatorDataset.zip
-    val data = spark.read.csv("../data/sparkml2/chapter4/newsCorpora.csv")
+    val data = spark.read.csv("./src/main/scala/spark/ml/cookbook/Chapter04/Data/newsCorpora.csv")
 
     val rowCount = data.count()
     println("Original RowCount=" + rowCount)

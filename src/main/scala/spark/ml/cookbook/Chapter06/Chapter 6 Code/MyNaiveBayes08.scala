@@ -39,7 +39,7 @@ object MyNaiveBayes08 {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val data = spark.sparkContext.textFile("../data/sparkml2/chapter6/iris.data.prepared.txt")
+    val data = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter06/Data/iris.data.prepared.txt")
     val NaiveBayesDataSet = data.map { line =>
       val columns = line.split(',')
 

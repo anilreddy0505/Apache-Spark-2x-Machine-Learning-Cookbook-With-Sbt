@@ -49,7 +49,7 @@ object MyRDD {
       *
       */
 
-    val dirKVrdd = spark.sparkContext.wholeTextFiles("../data/sparkml2/chapter3/*.txt") // place a large number of small files for demo
+    val dirKVrdd = spark.sparkContext.wholeTextFiles("./src/main/scala/spark/ml/cookbook/Chapter03/Data/*.txt") // place a large number of small files for demo
     println ("files in the directory as RDD ", dirKVrdd)
     println("total number of files ", dirKVrdd.count())
     println("Keys ", dirKVrdd.keys.count())
@@ -58,7 +58,7 @@ object MyRDD {
     println("Values ", dirKVrdd.first())
 
     //    **/
-    val book1 = spark.sparkContext.textFile("../data/sparkml2/chapter3/a.txt")
+    val book1 = spark.sparkContext.textFile("./src/main/scala/spark/ml/cookbook/Chapter03/Data/a.txt")
     // book1.foreach(println)
     val book2 = book1.flatMap(l => l.split(" "))
     val book3 = book1.flatMap(_.split(" "))

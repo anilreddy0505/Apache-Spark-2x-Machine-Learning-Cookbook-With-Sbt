@@ -21,7 +21,7 @@ object MyCSV {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val dataFile  = "../data/sparkml2/chapter11/ratings.csv"
+    val dataFile  = "./src/main/scala/spark/ml/cookbook/Chapter11/Data/ratings.csv"
     // 1. load the csv file as text file
     val file = spark.sparkContext.textFile(dataFile)
     val headerAndData = file.map(line => line.split(",").map(_.trim))

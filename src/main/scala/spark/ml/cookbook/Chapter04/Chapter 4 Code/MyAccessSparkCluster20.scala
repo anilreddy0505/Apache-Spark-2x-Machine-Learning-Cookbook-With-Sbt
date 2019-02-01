@@ -18,7 +18,7 @@ object MyAccessSparkCluster20 {
 
     val df = spark.read
           .option("header","True")
-          .csv("../data/sparkml2/chapter4/mySampleCSV.csv")
+          .csv("./src/main/scala/spark/ml/cookbook/Chapter04/Data/mySampleCSV.csv")
 
 
     df.show()

@@ -20,7 +20,7 @@ object MyPCA {
       .config("spark.sql.warehouse.dir", ".")
       .getOrCreate()
 
-    val dataFile  = "../data/sparkml2/chapter11/processed.cleveland.data"
+    val dataFile  = "./src/main/scala/spark/ml/cookbook/Chapter11/Data/processed.cleveland.data"
     val rawdata = spark.sparkContext.textFile(dataFile).map(_.trim)
     println(rawdata.count())
     val data = rawdata.filter(text => !(text.isEmpty || text.indexOf("?") > -1))

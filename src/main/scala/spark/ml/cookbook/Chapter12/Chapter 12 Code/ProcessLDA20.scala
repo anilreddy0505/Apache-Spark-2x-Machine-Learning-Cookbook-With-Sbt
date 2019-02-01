@@ -30,7 +30,7 @@ object ProcessLDA20 {
 
   def main(args: Array[String]) {
 
-    val input = "../data/sparkml2/chapter12/enwiki_dump.xml"
+    val input = "./src/main/scala/spark/ml/cookbook/Chapter12/Data/enwiki_dump.xml"
 
     val jobConf = new JobConf()
     jobConf.set("stream.recordreader.class", "org.apache.hadoop.streaming.StreamXmlRecordReader")
