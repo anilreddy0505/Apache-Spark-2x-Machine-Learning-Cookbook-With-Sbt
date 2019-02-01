@@ -19,8 +19,8 @@ libraryDependencies += "org.apache.hadoop" % "hadoop-mapreduce-client-core" % "2
 libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "2.7.2"
 libraryDependencies += "org.apache.hadoop" % "hadoop-streaming" % "2.7.2"
 
-libraryDependencies += "org.scalanlp" %% "breeze" % "1.0-RC2"
-libraryDependencies += "org.scalanlp" %% "breeze-viz" % "1.0-RC2"
+libraryDependencies += "org.scalanlp" %% "breeze" % "0.13.2"
+libraryDependencies += "org.scalanlp" %% "breeze-viz" % "0.13.2"
 
 libraryDependencies += "org.apache.hbase" % "hbase-client" % "0.98.6-cdh5.3.0" % "runtime"
 libraryDependencies += "org.apache.hbase" % "hbase-server" % "0.98.6-cdh5.3.0" % "runtime"
