@@ -30,6 +30,8 @@ object ProcessLDA20 {
 
   def main(args: Array[String]) {
 
+    // You should download data before run this code
+    // curl -L -O https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles-multistream.xml.bz2
     val input = "./src/main/scala/spark/ml/cookbook/Chapter12/Data/enwiki_dump.xml"
 
     val jobConf = new JobConf()

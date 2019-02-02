@@ -34,7 +34,7 @@ object DataFrameStream {
     val stream = spark.readStream
           .schema(df.schema)
           .option("maxFilesPerTrigger", "1")
-          .json("./src/main/scala/spark/ml/cookbook/Chapter13/Data/people")
+          .json("./src/main/resources")
 
     stream.printSchema()
 

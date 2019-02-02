@@ -18,7 +18,7 @@ object MyStreamingKMeans {
     val numDimensions = 3
 
 
-    Logger.getLogger("org").setLevel(Level.ERROR)
+    Logger.getLogger("org").setLevel(Level.INFO)
 
     // setup SparkSession to use for interactions with Spark
     val spark = SparkSession
